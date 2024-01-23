@@ -1,38 +1,106 @@
-.App {
-  text-align: center;
+*{
+  margin-right: .5rem;
+  margin-left: .5rem;
+  background-color:white;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.nav{
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: space-between;
+  font-size: medium;
+}
+
+.content{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.element{
+  display: inline-block;
+  position: relative;
+  color:black;
+}
+
+.element::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color:orange;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.element:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+
+li{
+  list-style-type: none; 
+  margin-left: 1rem;
+}
+
+.main-con{
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-top: 10rem;
 }
 
-.App-link {
-  color: #61dafb;
+.Img{
+  width: 25rem;
+  height: 20rem;
+  cursor: none;
+  margin-left: 10rem;
+  
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.subs{
+  font-size: 3.5rem;
+  margin: 0;
+  padding: 0;
+  color: orange;
+}
+
+.news{
+  font-size: 3.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.name{
+  width: 15rem;
+  height: 2rem;
+  border-radius: 2rem;
+  margin-bottom: 1rem;
+  padding-left: 1rem;
+  font-weight: 600;
+}
+
+.email{
+  width: 15rem;
+  height: 2rem;
+  border-radius: 2rem;
+  padding-left: 1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+button{
+  background-color: orange;
+  width: 7rem;
+  height: 2rem;
+  border-radius: 2rem;
+  padding-left: 1rem;
+  font-weight: 600;
+  text-align: center;
+
+}
+
+.logo{
+  font-size: larger;
+  font-weight:bolder;
 }
